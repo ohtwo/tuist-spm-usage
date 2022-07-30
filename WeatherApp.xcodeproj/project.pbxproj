@@ -23,6 +23,18 @@
 		49A96C23289406C30021E160 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 49A96C22289406C30021E160 /* Then */; };
 		49A96C2828940E200021E160 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 49A96C2728940E200021E160 /* RxCocoa */; };
 		49A96C2A28940E200021E160 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49A96C2928940E200021E160 /* RxSwift */; };
+		49A96C2E289412550021E160 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C2D289412550021E160 /* HttpClient.swift */; };
+		49A96C2F289412550021E160 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C2D289412550021E160 /* HttpClient.swift */; };
+		49A96C33289412EB0021E160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C32289412EB0021E160 /* Router.swift */; };
+		49A96C34289412EB0021E160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C32289412EB0021E160 /* Router.swift */; };
+		49DE608328951CC4005BF5F8 /* Router+Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608228951CC4005BF5F8 /* Router+Geo.swift */; };
+		49DE608428951CC4005BF5F8 /* Router+Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608228951CC4005BF5F8 /* Router+Geo.swift */; };
+		49DE608628951CDF005BF5F8 /* Router+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608528951CDF005BF5F8 /* Router+Weather.swift */; };
+		49DE608728951CDF005BF5F8 /* Router+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608528951CDF005BF5F8 /* Router+Weather.swift */; };
+		49DE6089289527B7005BF5F8 /* HttpRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE6088289527B7005BF5F8 /* HttpRoutable.swift */; };
+		49DE608A289527B7005BF5F8 /* HttpRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE6088289527B7005BF5F8 /* HttpRoutable.swift */; };
+		49DE608D28955D67005BF5F8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608C28955D67005BF5F8 /* Location.swift */; };
+		49DE608E28955D67005BF5F8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608C28955D67005BF5F8 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +51,12 @@
 		49A96C0D2894016B0021E160 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49A96C0F2894016C0021E160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A96C122894016C0021E160 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49A96C2D289412550021E160 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		49A96C32289412EB0021E160 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		49DE608228951CC4005BF5F8 /* Router+Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Geo.swift"; sourceTree = "<group>"; };
+		49DE608528951CDF005BF5F8 /* Router+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Weather.swift"; sourceTree = "<group>"; };
+		49DE6088289527B7005BF5F8 /* HttpRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRoutable.swift; sourceTree = "<group>"; };
+		49DE608C28955D67005BF5F8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +86,7 @@
 		49A96BD3289400CC0021E160 = {
 			isa = PBXGroup;
 			children = (
+				49A96C2B289412120021E160 /* Commons */,
 				49A96BF2289401520021E160 /* WeatherOne */,
 				49A96C0A2894016B0021E160 /* WeatherTwo */,
 				49A96BDD289400CC0021E160 /* Products */,
@@ -114,6 +133,51 @@
 				49A96C122894016C0021E160 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49A96C2B289412120021E160 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				49A96C31289412780021E160 /* APIs */,
+				49A96C2C289412260021E160 /* HttpClient */,
+				49A96C302894126A0021E160 /* Models */,
+				49DE608B2895597F005BF5F8 /* Routers */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		49A96C2C289412260021E160 /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				49A96C2D289412550021E160 /* HttpClient.swift */,
+				49DE6088289527B7005BF5F8 /* HttpRoutable.swift */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		49A96C302894126A0021E160 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49DE608C28955D67005BF5F8 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49A96C31289412780021E160 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		49DE608B2895597F005BF5F8 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				49A96C32289412EB0021E160 /* Router.swift */,
+				49DE608228951CC4005BF5F8 /* Router+Geo.swift */,
+				49DE608528951CDF005BF5F8 /* Router+Weather.swift */,
+			);
+			path = Routers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A96BF8289401520021E160 /* ViewController.swift in Sources */,
+				49DE608628951CDF005BF5F8 /* Router+Weather.swift in Sources */,
 				49A96BF4289401520021E160 /* AppDelegate.swift in Sources */,
+				49DE6089289527B7005BF5F8 /* HttpRoutable.swift in Sources */,
+				49DE608D28955D67005BF5F8 /* Location.swift in Sources */,
+				49DE608328951CC4005BF5F8 /* Router+Geo.swift in Sources */,
+				49A96C33289412EB0021E160 /* Router.swift in Sources */,
+				49A96C2E289412550021E160 /* HttpClient.swift in Sources */,
 				49A96BF6289401520021E160 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A96C34289412EB0021E160 /* Router.swift in Sources */,
 				49A96C0E2894016B0021E160 /* ContentView.swift in Sources */,
+				49DE608E28955D67005BF5F8 /* Location.swift in Sources */,
+				49DE608A289527B7005BF5F8 /* HttpRoutable.swift in Sources */,
+				49DE608428951CC4005BF5F8 /* Router+Geo.swift in Sources */,
+				49A96C2F289412550021E160 /* HttpClient.swift in Sources */,
+				49DE608728951CDF005BF5F8 /* Router+Weather.swift in Sources */,
 				49A96C0C2894016B0021E160 /* WeatherTwoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
