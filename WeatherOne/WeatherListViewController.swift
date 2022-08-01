@@ -33,7 +33,7 @@ class WeatherListViewController: UITableViewController {
 
 extension WeatherListViewController {
   func setupTable() {
-    tableView.register(WeatherListCell.self)
+    tableView.register(WeatherCell.self)
     tableView.allowsSelection = false
   }
   
@@ -60,7 +60,7 @@ extension WeatherListViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(for: indexPath) as WeatherListCell
+    let cell = tableView.dequeueReusableCell(for: indexPath) as WeatherCell
     
     let weather = forecasts[indexPath.section].weathers[indexPath.row]
     cell.configure(with: weather)

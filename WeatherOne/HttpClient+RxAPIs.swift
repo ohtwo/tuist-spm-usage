@@ -39,42 +39,15 @@ extension HttpClient {
       })
       .map({ $0.1 })
     
-    let combined = current
+    // Lint weather data
+    return current
       .flatMap({ current -> Observable<Forecast> in
         forecast.map { forecast in
           Forecast(city: forecast.city, weathers: [current]+forecast.weathers)
         }
       })
-    
-    return combined.flatMap({ forecast -> Observable<Forecast> in
-      var weathers: [Forecast.Weather] = []
-      
-      for item in forecast.weathers {
-        guard let last = weathers.last else {
-          weathers.append(item)
-          continue
-        }
-        guard item.date.toString(.date(.medium)) != last.date.toString(.date(.medium)) else {
-          var temp = last
-          temp.tempMin = min(item.tempMin, last.tempMin)
-          temp.tempMax = max(item.tempMax, last.tempMax)
-          
-          let count = weathers.count
-          weathers[count-1] = temp
-          continue
-        }
-        
-        var temp = item
-        temp.tempMin = min(item.tempMin, last.tempMin)
-        temp.tempMax = max(item.tempMax, last.tempMax)
-        
-        weathers.append(temp)
-      }
-      
-      let result = Forecast(city: forecast.city, weathers: weathers)
-      return Observable.of(result)
-    })
-    .take(6)
-    .debug()
+      .map({ $0.lintData() })
+      .take(6)
+      .debug()
   }
 }

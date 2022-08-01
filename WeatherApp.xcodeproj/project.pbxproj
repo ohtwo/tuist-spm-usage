@@ -12,13 +12,14 @@
 		4993F8D628977B870077E188 /* HttpClient+RxAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8D528977B870077E188 /* HttpClient+RxAPIs.swift */; };
 		4993F8D92897BFB00077E188 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4993F8D82897BFB00077E188 /* Kingfisher */; };
 		4993F8DB2897C5FD0077E188 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8DA2897C5FD0077E188 /* UITableView+Reusable.swift */; };
+		4993F8DE289801480077E188 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 4993F8DD289801480077E188 /* SwiftDate */; };
 		49A96BF4289401520021E160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96BF3289401520021E160 /* AppDelegate.swift */; };
 		49A96BF6289401520021E160 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96BF5289401520021E160 /* SceneDelegate.swift */; };
 		49A96BF8289401520021E160 /* WeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96BF7289401520021E160 /* WeatherListViewController.swift */; };
 		49A96BFD289401530021E160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A96BFC289401530021E160 /* Assets.xcassets */; };
 		49A96C00289401530021E160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A96BFE289401530021E160 /* LaunchScreen.storyboard */; };
 		49A96C0C2894016B0021E160 /* WeatherTwoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C0B2894016B0021E160 /* WeatherTwoApp.swift */; };
-		49A96C0E2894016B0021E160 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C0D2894016B0021E160 /* ContentView.swift */; };
+		49A96C0E2894016B0021E160 /* WeatherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C0D2894016B0021E160 /* WeatherList.swift */; };
 		49A96C102894016C0021E160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A96C0F2894016C0021E160 /* Assets.xcassets */; };
 		49A96C132894016C0021E160 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A96C122894016C0021E160 /* Preview Assets.xcassets */; };
 		49A96C19289402B50021E160 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 49A96C18289402B50021E160 /* Alamofire */; };
@@ -29,6 +30,10 @@
 		49A96C2F289412550021E160 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C2D289412550021E160 /* HttpClient.swift */; };
 		49A96C33289412EB0021E160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C32289412EB0021E160 /* Router.swift */; };
 		49A96C34289412EB0021E160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96C32289412EB0021E160 /* Router.swift */; };
+		49B0159628986AD1006AF869 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 49B0159528986AD1006AF869 /* Kingfisher */; };
+		49B0159828987B37006AF869 /* HttpClient+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0159728987B37006AF869 /* HttpClient+Combine.swift */; };
+		49B0159A28987B7C006AF869 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0159928987B7C006AF869 /* WeatherCell.swift */; };
+		49B0159C28989354006AF869 /* WeatherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0159B28989354006AF869 /* WeatherVM.swift */; };
 		49B73EBB289670EF004C56E5 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 49B73EBA289670EF004C56E5 /* RxAlamofire */; };
 		49B73EC02896ABC2004C56E5 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B73EBF2896ABC2004C56E5 /* Forecast.swift */; };
 		49B73EC12896ABC2004C56E5 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B73EBF2896ABC2004C56E5 /* Forecast.swift */; };
@@ -41,7 +46,7 @@
 		49DE608A289527B7005BF5F8 /* HttpRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE6088289527B7005BF5F8 /* HttpRoutable.swift */; };
 		49DE608D28955D67005BF5F8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608C28955D67005BF5F8 /* Location.swift */; };
 		49DE608E28955D67005BF5F8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608C28955D67005BF5F8 /* Location.swift */; };
-		49DE60902895B152005BF5F8 /* WeatherListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608F2895B152005BF5F8 /* WeatherListCell.swift */; };
+		49DE60902895B152005BF5F8 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE608F2895B152005BF5F8 /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,17 +62,20 @@
 		49A96C01289401530021E160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49A96C092894016B0021E160 /* WeatherTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A96C0B2894016B0021E160 /* WeatherTwoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTwoApp.swift; sourceTree = "<group>"; };
-		49A96C0D2894016B0021E160 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		49A96C0D2894016B0021E160 /* WeatherList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherList.swift; sourceTree = "<group>"; };
 		49A96C0F2894016C0021E160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A96C122894016C0021E160 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49A96C2D289412550021E160 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		49A96C32289412EB0021E160 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		49B0159728987B37006AF869 /* HttpClient+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpClient+Combine.swift"; sourceTree = "<group>"; };
+		49B0159928987B7C006AF869 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		49B0159B28989354006AF869 /* WeatherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVM.swift; sourceTree = "<group>"; };
 		49B73EBF2896ABC2004C56E5 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		49DE608228951CC4005BF5F8 /* Router+Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Geo.swift"; sourceTree = "<group>"; };
 		49DE608528951CDF005BF5F8 /* Router+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Weather.swift"; sourceTree = "<group>"; };
 		49DE6088289527B7005BF5F8 /* HttpRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRoutable.swift; sourceTree = "<group>"; };
 		49DE608C28955D67005BF5F8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		49DE608F2895B152005BF5F8 /* WeatherListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListCell.swift; sourceTree = "<group>"; };
+		49DE608F2895B152005BF5F8 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B0159628986AD1006AF869 /* Kingfisher in Frameworks */,
+				4993F8DE289801480077E188 /* SwiftDate in Frameworks */,
 				49A96C1C2894037A0021E160 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +105,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4993F8DC289801480077E188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49A96BD3289400CC0021E160 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 				49A96BF2289401520021E160 /* WeatherOne */,
 				49A96C0A2894016B0021E160 /* WeatherTwo */,
 				49A96BDD289400CC0021E160 /* Products */,
+				4993F8DC289801480077E188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,7 +138,7 @@
 				49A96BF3289401520021E160 /* AppDelegate.swift */,
 				49A96BF5289401520021E160 /* SceneDelegate.swift */,
 				49A96BF7289401520021E160 /* WeatherListViewController.swift */,
-				49DE608F2895B152005BF5F8 /* WeatherListCell.swift */,
+				49DE608F2895B152005BF5F8 /* WeatherCell.swift */,
 				4993F8DA2897C5FD0077E188 /* UITableView+Reusable.swift */,
 				4993F8D528977B870077E188 /* HttpClient+RxAPIs.swift */,
 				49A96BFC289401530021E160 /* Assets.xcassets */,
@@ -134,7 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				49A96C0B2894016B0021E160 /* WeatherTwoApp.swift */,
-				49A96C0D2894016B0021E160 /* ContentView.swift */,
+				49A96C0D2894016B0021E160 /* WeatherList.swift */,
+				49B0159928987B7C006AF869 /* WeatherCell.swift */,
+				49B0159B28989354006AF869 /* WeatherVM.swift */,
+				49B0159728987B37006AF869 /* HttpClient+Combine.swift */,
 				49A96C0F2894016C0021E160 /* Assets.xcassets */,
 				49A96C112894016C0021E160 /* Preview Content */,
 			);
@@ -239,6 +260,8 @@
 			name = WeatherTwo;
 			packageProductDependencies = (
 				49A96C1B2894037A0021E160 /* Alamofire */,
+				4993F8DD289801480077E188 /* SwiftDate */,
+				49B0159528986AD1006AF869 /* Kingfisher */,
 			);
 			productName = WeatherTwo;
 			productReference = 49A96C092894016B0021E160 /* WeatherTwo.app */;
@@ -317,7 +340,7 @@
 				4993F8D3289778D80077E188 /* Decodable+Any.swift in Sources */,
 				49A96BF8289401520021E160 /* WeatherListViewController.swift in Sources */,
 				49DE608628951CDF005BF5F8 /* Router+Weather.swift in Sources */,
-				49DE60902895B152005BF5F8 /* WeatherListCell.swift in Sources */,
+				49DE60902895B152005BF5F8 /* WeatherCell.swift in Sources */,
 				49A96BF4289401520021E160 /* AppDelegate.swift in Sources */,
 				49DE6089289527B7005BF5F8 /* HttpRoutable.swift in Sources */,
 				49DE608D28955D67005BF5F8 /* Location.swift in Sources */,
@@ -336,15 +359,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A96C34289412EB0021E160 /* Router.swift in Sources */,
-				49A96C0E2894016B0021E160 /* ContentView.swift in Sources */,
+				49A96C0E2894016B0021E160 /* WeatherList.swift in Sources */,
 				49DE608E28955D67005BF5F8 /* Location.swift in Sources */,
 				49DE608A289527B7005BF5F8 /* HttpRoutable.swift in Sources */,
 				4993F8D4289778D80077E188 /* Decodable+Any.swift in Sources */,
 				49B73EC12896ABC2004C56E5 /* Forecast.swift in Sources */,
 				49DE608428951CC4005BF5F8 /* Router+Geo.swift in Sources */,
 				49A96C2F289412550021E160 /* HttpClient.swift in Sources */,
+				49B0159A28987B7C006AF869 /* WeatherCell.swift in Sources */,
 				49DE608728951CDF005BF5F8 /* Router+Weather.swift in Sources */,
 				49A96C0C2894016B0021E160 /* WeatherTwoApp.swift in Sources */,
+				49B0159C28989354006AF869 /* WeatherVM.swift in Sources */,
+				49B0159828987B37006AF869 /* HttpClient+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +691,11 @@
 			package = 4993F8D72897BFB00077E188 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
+		4993F8DD289801480077E188 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49B73EC22896CBA4004C56E5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
 		49A96C18289402B50021E160 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 49A96C17289402B50021E160 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -684,6 +715,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 49A96C2628940E200021E160 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		49B0159528986AD1006AF869 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4993F8D72897BFB00077E188 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		49B73EBA289670EF004C56E5 /* RxAlamofire */ = {
 			isa = XCSwiftPackageProductDependency;

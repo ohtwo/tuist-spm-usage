@@ -1,5 +1,5 @@
 //
-//  WeatherListCell.swift
+//  WeatherCell.swift
 //  WeatherOne
 //
 //  Created by Kang Byeonghak on 2022/07/31.
@@ -9,7 +9,7 @@ import UIKit
 import SwiftDate
 import Kingfisher
 
-class WeatherListCell: UITableViewCell, ReusableView {
+class WeatherCell: UITableViewCell, ReusableView {
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
   }
@@ -36,7 +36,7 @@ class WeatherListCell: UITableViewCell, ReusableView {
       self.layoutIfNeeded()
     })
     
-    textLabel?.text = "\(weather.main) \(weather.date.toFormat("M.d(E)") )"
+    textLabel?.text = "\(weather.main) \(weather.date.toFormat("M.d(E)"))"
     detailTextLabel?.text = "\(weather.description) \(Int(weather.tempMin))°/\(Int(weather.tempMax))°"
   }
 }

@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Forecast: Decodable {
+struct Forecast: Decodable, Identifiable {
+  let id = UUID()
+  
   let city: City
   let weathers: [Weather]
 }
@@ -25,7 +27,9 @@ extension Forecast {
     let country: String
   }
   
-  struct Weather: Decodable {
+  struct Weather: Decodable, Hashable, Identifiable {
+    let id = UUID()
+    
     let main: String
     let description: String
     let icon: String
@@ -73,17 +77,33 @@ extension Forecast.Weather {
   }
 }
 
-struct JSONCodingKeys: CodingKey {
-    var stringValue: String
-
-    init?(stringValue: String) {
-        self.stringValue = stringValue
+extension Forecast {
+  func lintData() -> Forecast {
+    var weathers: [Forecast.Weather] = []
+    
+    for item in self.weathers {
+      guard let last = weathers.last else {
+        weathers.append(item)
+        continue
+      }
+      guard item.date.toString(.date(.medium)) != last.date.toString(.date(.medium)) else {
+        var temp = last
+        temp.tempMin = min(item.tempMin, last.tempMin)
+        temp.tempMax = max(item.tempMax, last.tempMax)
+        
+        let count = weathers.count
+        weathers[count-1] = temp
+        continue
+      }
+      
+      var temp = item
+      temp.tempMin = min(item.tempMin, last.tempMin)
+      temp.tempMax = max(item.tempMax, last.tempMax)
+      
+      weathers.append(temp)
     }
-
-    var intValue: Int?
-
-    init?(intValue: Int) {
-        self.init(stringValue: "\(intValue)")
-        self.intValue = intValue
-    }
+    
+    let result = Forecast(city: self.city, weathers: weathers)
+    return result
+  }
 }
