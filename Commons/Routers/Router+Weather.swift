@@ -34,7 +34,8 @@ extension Router.Weather: HttpRoutable {
       return [
         "appid": Router.apiKey,
         "lat": coordinate.latitude,
-        "lon": coordinate.longitude
+        "lon": coordinate.longitude,
+        "units": "metric"
       ]
     }
   }

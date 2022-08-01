@@ -16,7 +16,7 @@ struct Location: Codable {
 }
 
 extension Location {
-  enum CodingKey: String, Swift.CodingKey {
+  enum CodingKeys: String, CodingKey {
     case name
     case localNames   = "local_names"
     case latitude     = "lat"
