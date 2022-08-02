@@ -173,7 +173,6 @@
 		49A96C2B289412120021E160 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				49A96C31289412780021E160 /* APIs */,
 				49A96C2C289412260021E160 /* HttpClient */,
 				49A96C302894126A0021E160 /* Models */,
 				49DE608B2895597F005BF5F8 /* Routers */,
@@ -198,13 +197,6 @@
 				4993F8D2289778D80077E188 /* Decodable+Any.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		49A96C31289412780021E160 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIs;
 			sourceTree = "<group>";
 		};
 		49DE608B2895597F005BF5F8 /* Routers */ = {
