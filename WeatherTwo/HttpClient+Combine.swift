@@ -18,6 +18,7 @@ extension HttpClient {
     let coordinate = HttpClient.request(route).publishDecodable(type: [Location].self)
       .value()
       .compactMap({ $0.first?.coordinate })
+      .share()
       .eraseToAnyPublisher()
 
     // Current weather data

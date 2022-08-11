@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4993F8D3289778D80077E188 /* Decodable+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8D2289778D80077E188 /* Decodable+Any.swift */; };
 		4993F8D4289778D80077E188 /* Decodable+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8D2289778D80077E188 /* Decodable+Any.swift */; };
-		4993F8D628977B870077E188 /* HttpClient+RxAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8D528977B870077E188 /* HttpClient+RxAPIs.swift */; };
+		4993F8D628977B870077E188 /* HttpClient+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8D528977B870077E188 /* HttpClient+RxSwift.swift */; };
 		4993F8D92897BFB00077E188 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4993F8D82897BFB00077E188 /* Kingfisher */; };
 		4993F8DB2897C5FD0077E188 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993F8DA2897C5FD0077E188 /* UITableView+Reusable.swift */; };
 		4993F8DE289801480077E188 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 4993F8DD289801480077E188 /* SwiftDate */; };
@@ -51,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		4993F8D2289778D80077E188 /* Decodable+Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Any.swift"; sourceTree = "<group>"; };
-		4993F8D528977B870077E188 /* HttpClient+RxAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpClient+RxAPIs.swift"; sourceTree = "<group>"; };
+		4993F8D528977B870077E188 /* HttpClient+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpClient+RxSwift.swift"; sourceTree = "<group>"; };
 		4993F8DA2897C5FD0077E188 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		49A96BF1289401520021E160 /* WeatherOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A96BF3289401520021E160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				49A96BF7289401520021E160 /* WeatherListViewController.swift */,
 				49DE608F2895B152005BF5F8 /* WeatherCell.swift */,
 				4993F8DA2897C5FD0077E188 /* UITableView+Reusable.swift */,
-				4993F8D528977B870077E188 /* HttpClient+RxAPIs.swift */,
+				4993F8D528977B870077E188 /* HttpClient+RxSwift.swift */,
 				49A96BFC289401530021E160 /* Assets.xcassets */,
 				49A96BFE289401530021E160 /* LaunchScreen.storyboard */,
 				49A96C01289401530021E160 /* Info.plist */,
@@ -342,7 +342,7 @@
 				49A96C2E289412550021E160 /* HttpClient.swift in Sources */,
 				49B73EC02896ABC2004C56E5 /* Forecast.swift in Sources */,
 				49A96BF6289401520021E160 /* SceneDelegate.swift in Sources */,
-				4993F8D628977B870077E188 /* HttpClient+RxAPIs.swift in Sources */,
+				4993F8D628977B870077E188 /* HttpClient+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,8 +663,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
 			};
 		};
 		49B73EC22896CBA4004C56E5 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
